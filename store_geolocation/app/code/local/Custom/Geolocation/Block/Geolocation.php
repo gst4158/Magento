@@ -14,13 +14,11 @@ class Custom_Geolocation_Block_Geolocation extends Mage_Core_Block_Template {
 		#################TESTING##############
 		/*
 		$input = array(
-			'206.193.215.123', // allen
 			'129.24.150.63', // new mexico
 			'138.128.7.194', // anchorage alaksa
 			'98.155.61.204', // hawaii
 			'192.206.151.131', // canada,
 			'71.127.225.247',//NJ
-			'54.37.132.193',//NJ
 			'104.144.125.196',//Denver
 			'156.98.76.130', // Minnesota
 		);
