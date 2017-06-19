@@ -16,7 +16,7 @@
          <layout>
             <updates>
                 <geolocation>
-					<!-- append geolocation xml to site local.xml if not in there -->
+		    <!-- append geolocation xml to site local.xml if not in there -->
                     <file>geolocation.xml</file>
                 </geolocation>
             </updates>
