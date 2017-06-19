@@ -36,7 +36,7 @@ _Module assumes you're working under a custom store and not inside default _
          <layout>
             <updates>
                 <geolocation>
-					          <!-- append geolocation xml to site local.xml -->
+		    <!-- append geolocation xml to site local.xml -->
                     <file>geolocation.xml</file>
                 </geolocation>
             </updates>
