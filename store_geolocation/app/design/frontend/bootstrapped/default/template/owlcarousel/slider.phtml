@@ -1,4 +1,55 @@
-<?php
-    // home page desktop/tablet banner
-    echo Mage::getBlockSingleton('geolocation/geolocation')->getGeolocationBlocks('home_slider');
-?>
+<!-- Important Owl stylesheet -->
+<link rel="stylesheet" href="<?php echo $this->getSkinUrl('owl-carousel/owl.carousel.css'); ?>">
+
+<!-- Default Theme -->
+<link rel="stylesheet" href="<?php echo $this->getSkinUrl('owl-carousel/owl.theme.css'); ?>">
+
+<!-- Featured Theme -->
+<link rel="stylesheet" href="<?php echo $this->getSkinUrl('owl-carousel/owl.featured.css'); ?>">
+
+<script src="<?php echo $this->getSkinUrl('owl-carousel/owl.carousel.js'); ?>"></script>
+<style>
+    .home-slider  .owl-theme .owl-controls {
+        margin-top: -25px;
+    }
+    .home-slider .owl-carousel .owl-wrapper-outer {
+        margin-bottom: 25px;
+    }
+</style>
+<div class="home-slider hidden-phone">
+    <div id="owl-example" class="owl-carousel">
+    <?php
+        // home page desktop/tablet banner
+        echo Mage::getBlockSingleton('geolocation/geolocation')->getGeolocationBlocks('home_slider');
+    ?>
+    </div>
+</div>
+<div class="home-slider visible-phone">
+    <div id="owl-example2" class="owl-carousel">
+        <?php
+            // home page phone banner
+            echo Mage::getBlockSingleton('geolocation/geolocation')->getGeolocationBlocks('phone_home_slider');
+        ?>
+    </div>
+</div>
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+
+        jQuery("#owl-example").owlCarousel({
+            slideSpeed : 500,
+            paginationSpeed : 400,
+            singleItem:true,
+            autoPlay: 8000,
+            stopOnHover: true
+       });
+        jQuery("#owl-example2").owlCarousel({
+            slideSpeed : 500,
+            paginationSpeed : 400,
+            singleItem:true,
+            autoPlay: 8000,
+            stopOnHover: true
+        });
+
+    });
+</script>
