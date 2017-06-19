@@ -1,7 +1,7 @@
 # Magento Geolocation
 This module useses MaxMind's GeoIP2 geolocation database to look at the users $_SERVER['REMOTE_ADDR'] IP address and return information pertaining to it.
 
-_Module assumes you're working under a custom store and not inside default _
+*Module assumes you're working under a custom store and not inside default*
 
 ### Out of the Box:
 - Custom modules are not cached
@@ -11,7 +11,7 @@ _Module assumes you're working under a custom store and not inside default _
 
 ### Dependencies
 - 1.9 Magento Enterprise edition
-- ERP Plus Store Locator Module *returns a json array of store information - can easily be replaced by a google api or custom json*
+- ERP Plus Store Locator Module *returns a json array of store information - can be replaced by a google api or custom json*
 
 ---
 
