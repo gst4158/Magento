@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <default>
+         <reference name="header">
+            <block type="geolocation/geolocation" name="geolocation.geolocation"  as="geolocation_geolocation" template="geolocation/headerbanner.phtml" />
+        </reference>
+    </default>
+</layout>
