@@ -21,9 +21,13 @@ $sliderId = Mage::getBlockSingleton('geolocation/geolocation')->getGeolocationBl
 ```
 
 - There are three layers of conditionals for each geolocation block:
+
 -- Each time a block is requested; it checks if that block exist prior to loading it to the page.
+
 -- You can write a checker using the ```selectiveRange()``` function which will look at the user details, limit it by country and states.
+
 -- The second layer checks if the user has a store assigned to them. This overwrites the selectiveRange block.
+
 -- the default layer prints out the basic banner since no geoblock or selective range was identified.
 
 ### Dependencies
