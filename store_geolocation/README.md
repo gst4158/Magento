@@ -131,7 +131,7 @@ echo Mage::getBlockSingleton('geolocation/geolocation')->getGeolocationBlocks('h
 ```
 
 ###### 4. root/design/frontend/bootstrapped/default/template/aw_islider/home.phtml
-	###### **Pay attention to the second parameter or the function 'aw_islider'. This returns an AW iSlider ID rather than a CMS block**
+###### **Pay attention to the second parameter or the function 'aw_islider'. This returns an AW iSlider ID rather than a CMS block**
 ```
 // Select slider ID from geolocation
 $sliderId = Mage::getBlockSingleton('geolocation/geolocation')->getGeolocationBlocks('homepage-ads', 'aw_islider');
