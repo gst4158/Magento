@@ -16,7 +16,7 @@ This module useses MaxMind's GeoIP2 geolocation database to look at the users $_
 ---
 
 #### Include CMS block directly into phtml file:
-###### root/app/code/local/Custom/Geolocation/etc/config.xml
+###### - root/app/code/local/Custom/Geolocation/etc/config.xml
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
