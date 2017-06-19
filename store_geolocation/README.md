@@ -44,7 +44,7 @@ This module useses MaxMind's GeoIP2 geolocation database to look at the users $_
     </frontend>
 </config>
 ```
-- root/design/frontend/bootstrapped/default/layout/geolocation.xml
+###### - root/design/frontend/bootstrapped/default/layout/geolocation.xml
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <layout version="0.1.0">
@@ -56,10 +56,67 @@ This module useses MaxMind's GeoIP2 geolocation database to look at the users $_
 </layout>
 ```
 
-- root/design/frontend/bootstrapped/customstore/template/geolocation/headerbanner.phtml
+###### - root/design/frontend/bootstrapped/default/template/geolocation/headerbanner.phtml
 ```
-<?php
 // get header banner geolocation block
 echo Mage::getBlockSingleton('geolocation/geolocation')->getGeolocationBlocks('header_banner');
-?>
+```
+
+###### - root/design/frontend/bootstrapped/customstore/template/page/html/header.phtml
+```
+<div class="header-banner">
+    <?php echo $this->getChildHtml('geolocation_geolocation');  ?>
+</div>
+```
+
+#### Include CMS block from XML:
+###### - root/app/code/local/Custom/Geolocation/etc/confcache.xml
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <placeholders>
+        <!-- home page slider desktop/tablet cache -->
+        <geolocation_nocache_slider>
+            <block>core/template</block>
+	    <name>slider</name>
+            <placeholder>slider</placeholder>
+            <container>Custom_Geolocation_Model_Nocache</container>
+            <cache_lifetime>1</cache_lifetime>
+        </geolocation_nocache_slider>
+	
+        <!-- home page ads - AW_iSlider -->
+        <geolocation_nocache_homeads>
+            <block>awislider/block</block>
+            <name>home-ads</name>
+            <placeholder>home-ads</placeholder>
+            <container>Custom_Geolocation_Model_Nocache</container>
+            <cache_lifetime>1</cache_lifetime>
+        </geolocation_nocache_homeads>
+    </placeholders>
+</config>
+```
+
+###### - root/design/frontend/bootstrapped/customstore/layout/local.xml
+```
+<cms_index_index>
+    <reference name="root">
+        <remove name="global_messages" />
+        <block type="core/template" name="slider" as="slider"  template="owlcarousel/slider.phtml" />
+        <block type="awislider/block" name="home-ads" as="home-ads" template="aw_islider/home.phtml" />
+    </reference>
+</cms_index_index>
+```
+
+###### - root/design/frontend/bootstrapped/default/template/owlcarousel/slider.phtml
+**Pay attention to the second parameter or the function 'aw_islider'. This returns an AW iSlider ID rather than a CMS block**
+```
+// home page desktop/tablet banner
+echo Mage::getBlockSingleton('geolocation/geolocation')->getGeolocationBlocks('home_slider');
+```
+
+###### - root/design/frontend/bootstrapped/default/template/aw_islider/home.phtml
+**Pay attention to the second parameter or the function 'aw_islider'. This returns an AW iSlider ID rather than a CMS block**
+```
+// Select slider ID from geolocation
+$sliderId = Mage::getBlockSingleton('geolocation/geolocation')->getGeolocationBlocks('homepage-ads', 'aw_islider');
 ```
