@@ -5,7 +5,7 @@ This module includes OG tags for facebook and twitter into the head.phtml file f
 
 ### Where to find new media uploader:
 - Products: Production Information > Meta Information > last item in module
-  * ###### Note: Image will not show in admin side; but will load correctly on frontend
+  * Note: Image will not show in admin side; but will load correctly on frontend
 - Categories: Select your Category from store list > last item in module > uncheck 'Use Default View' if checked
 - CMS Pages: Select your CMS Page > Page Information > last item in module under ```Social Media```
 
