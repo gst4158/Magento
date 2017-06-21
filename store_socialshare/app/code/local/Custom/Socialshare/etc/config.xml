@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <!-- define module -->
+    <modules>
+        <Custom_Socialshare>
+            <version>0.0.1</version>
+        </Custom_Socialshare>
+    </modules> <!-- END define module -->
+
+    <!-- globals -->
+    <global>
+
+        <models>
+            <custom_socialshare>
+                <class>Custom_Socialshare_Modal</class>
+            </custom_socialshare>
+        </models>
+
+        <blocks>
+            <custom_socialshare>
+                <class>Custom_Socialshare_Block</class>
+            </custom_socialshare>
+            <page>
+                <custom_socialshare>
+                    <html_head>Custom_Socialshare_Block_Page_Html_Head</html_head>
+                </custom_socialshare>
+            </page>
+            <adminhtml>
+                <rewrite>
+                    <cms_page_edit_form>Custom_Socialshare_Adminhtml_Block_Cms_Page_Edit_Form</cms_page_edit_form>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+
+        <resources>
+            <custom_socialshare_setup>
+                <setup>
+                    <module>Custom_Socialshare</module>
+                    <class>Mage_Catalog_Model_Resource_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </custom_socialshare_setup>
+            <socialshare_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </socialshare_write>
+            <socialshare_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </socialshare_read>
+        </resources>
+
+    </global> <!-- END globals -->
+
+    <!-- Admin HTML -->
+    <adminhtml>
+        <events>
+
+            <!-- CMS pages -->
+            <adminhtml_cms_page_edit_tab_main_prepare_form>
+                <observers>
+                    <custom_socialshare_prepare_form>
+                        <type>singleton</type>
+                        <class>Custom_Socialshare_Model_Observer</class>
+                        <method>prepareForm</method>
+                    </custom_socialshare_prepare_form>
+                </observers>
+            </adminhtml_cms_page_edit_tab_main_prepare_form>
+
+            <cms_page_prepare_save>
+                <observers>
+                    <custom_socialshare_save_page>
+                        <type>singleton</type>
+                        <class>Custom_Socialshare_Model_Observer</class>
+                        <method>savePage</method>
+                    </custom_socialshare_save_page>
+                </observers>
+            </cms_page_prepare_save>
+
+        </events>
+    </adminhtml> <!-- END  Admin HTML -->
+
+</config>
