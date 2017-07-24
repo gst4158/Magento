@@ -1,0 +1,31 @@
+<?php
+/**
+ * Magento responsive theme
+ *
+ * @category    design
+ * @package     bootstrapped_default
+ * @copyright   Copyright (c) 2012 Magenthon (http://magenthon.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ * @author      Vedran Subotic <vedran@magenthon.com>
+ */
+
+/**
+ * Product view template
+ *
+ * @see Mage_Catalog_Block_Product_View
+ * @see Mage_Review_Block_Product_View
+ */
+?>
+
+<?php
+  // Generate wufoo form from json
+  echo Mage::helper('custom_wufoo')->getWufooForm(
+      $options = array(
+          'wufooID'         => '123456789012345',
+          'formID'          => 'customformid',
+          'fillfields'  => array(
+              'Field219' => Mage::helper('core/url')->getCurrentUrl(),
+          )
+      )
+  );
+?>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Custom_Wufoo>
+            <version>0.1.0</version>
+        </Custom_Wufoo>
+    </modules>
+
+    <global>
+        <!-- add wufoo helper -->
+        <helpers>
+			<custom_wufoo>
+				<class>Custom_Wufoo_Helper</class>
+			</custom_wufoo>
+		</helpers>
+	</global>
+
+    <frontend>
+        <!-- enables front-end url - called to for ajax function -->
+        <routers>
+            <wufoo>
+                <use>standard</use>
+                <args>
+                    <module>Custom_Wufoo</module>
+                    <frontName>wufoo</frontName>
+                </args>
+            </wufoo>
+        </routers>
+
+        <!-- add frontend file - JS ajax script -->
+        <layout>
+           <updates>
+               <wufoo>
+                   <module>Custom_Wufoo</module>
+                   <file>wufoo.xml</file>
+               </wufoo>
+           </updates>
+       </layout>
+    </frontend>
+
+</config>

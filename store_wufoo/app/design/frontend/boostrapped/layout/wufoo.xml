@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <catalog_product_view>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/wufooforms.css</stylesheet></action>
+        </reference>
+
+        <reference name="before_body_end">
+            <block type="core/template" name="monkey_wufoo_scripts" as="monkey_wufoo_scripts" template="/wufoo/scripts.phtml"/>
+        </reference>
+    </catalog_product_view>
+</layout>

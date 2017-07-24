@@ -1,0 +1,401 @@
+/*----------------------------------------------------
+* Wufoo Form CSS
+* Styles for dynamic auto formated Wufoo forms generated from their API
+* ----------------------------------------------------*/
+/* basic set up */
+.wufoo-form input:not([type="radio"]):not([type="checkbox"]),
+.wufoo-form select,
+.wufoo-form textarea,
+.wufoo-form table {
+    position: relative;
+    width: 100% !important;
+    height: auto !important;
+    padding: 7px 5px;
+}
+
+.wufoo-form select {
+    padding: 5px 5px;
+}
+
+.wufoo-form label {
+    display: block;
+}
+
+.wufoo-form .input-box > label {
+    font-weight: bold;
+}
+
+.wufoo-form label input[type="radio"],
+.wufoo-form label input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+    margin-right: 10px;
+}
+
+.wufoo-form textarea {
+    min-height: 125px;
+}
+
+.wufoo-form .wufoo-date input[readonly] {
+    background-color: #fff;
+    border: 1px solid #8B8B8E;
+    cursor: pointer;
+}
+
+.wufoo-form .clearfix:before,
+.wufoo-form .clearfix:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.wufoo-success {
+    position: relative;
+    margin-top: 40px;
+}
+
+.wufoo-success p {
+    margin-top: 40px;
+    padding: 10px 15px;
+    background: #dff2bf;
+    color: #68941e;
+    border-color: #68941e;
+}
+
+.wufoo-success button {
+    display: block;
+    margin: 5px auto 0;
+    padding: 5px 15px;
+    font-size: 15px;
+}
+
+/* typography */
+.wufoo-form > h3,
+.wufoo-form > h3 + p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.wufoo-form > h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.wufoo-form > h3 + p {
+    margin-bottom: 25px;
+}
+
+/* wufoo grid */
+.wufoo-form .input-box {
+    position: relative;
+    float: left;
+    width: 100%;
+    clear: both;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.wufoo-form .wufoo-address .input-box,
+.wufoo-form .wufoo-shortname .input-box {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0;
+}
+
+.wufoo-form.grid-33 .input-box,
+.wufoo-form.grid-50 .input-box,
+.wufoo-form.grid-60 .input-box,
+.wufoo-form.grid-75 .input-box,
+.wufoo-form.grid-100 .input-box,
+.wufoo-form .input-box.grid-25,
+.wufoo-form .input-box.grid-33,
+.wufoo-form .input-box.grid-50,
+.wufoo-form .input-box.grid-66,
+.wufoo-form .input-box.grid-75,
+.wufoo-form .input-box.grid-100 {
+    position: relative;
+    float: left;
+    clear: none;
+}
+
+.wufoo-form.grid-25 .input-box  { width: 25%; }
+.wufoo-form.grid-33 .input-box  { width: 33.33%; }
+.wufoo-form.grid-50 .input-box  { width: 50%;    }
+.wufoo-form.grid-60 .input-box  { width: 66.66%; }
+.wufoo-form.grid-75 .input-box  { width: 75%;    }
+.wufoo-form.grid-100 .input-box { width: 100%;   }
+
+.wufoo-form .input-box.grid-25  { width: 25% !important; }
+.wufoo-form .input-box.grid-33  { width: 33.33% !important; }
+.wufoo-form .input-box.grid-50  { width: 50% !important;    }
+.wufoo-form .input-box.grid-66  { width: 66.66% !important; }
+.wufoo-form .input-box.grid-75  { width: 75% !important;    }
+.wufoo-form .input-box.grid-100 { width: 100% !important;   }
+
+.wufoo-form .input-box.hidden {display: none !important;}
+
+/* force scrollbar to be visible on mobile devices */
+.wufoo-modal  .modal-body {
+    -webkit-overflow-scrolling: touch;
+}
+
+.wufoo-modal ::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.wufoo-modal ::-webkit-scrollbar:vertical {
+    width: 12px;
+}
+
+.wufoo-modal ::-webkit-scrollbar:horizontal {
+    height: 12px;
+}
+
+.wufoo-modal ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+}
+
+.wufoo-modal ::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+/* disregard webkit autofill color changes on inputs */
+.wufoo-modal input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px #fff inset;
+    -webkit-text-fill-color: #333;
+}
+
+.wufoo-modal input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 50px #fff inset;
+    -webkit-text-fill-color: #333;
+}
+
+/*----------------------------------------------------
+* Modal Settings
+* Form styles when used in popup modal
+* ----------------------------------------------------*/
+.modal .wufoo-form {
+    padding-top: 50px;
+    text-align: left;
+    -webkit-backface-visibility: hidden;
+}
+
+.wufoo-modal {
+    -webkit-border-radius: 0px;
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius: 0px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-radius: 0px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.wufoo-modal .modal-header {
+    position: absolute;
+    width: 100%;
+    padding: 10px 5px;
+    background: white;
+    z-index: 1;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.wufoo-modal .modal-body {
+    padding: 15px;
+    max-height: 400px !important;
+}
+
+.wufoo-modal .modal-header .close {
+    text-shadow: none;
+    border: none;
+    margin: -10px -5px -10px -20px;
+    padding: 10px 10px;
+    border-left: 1px solid #c0c0c0;
+}
+
+body.modal-open .calendar {
+    z-index: 1140;
+    position: fixed !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 200px !important;
+    height: 195px !important;
+    margin: auto !important;
+}
+
+
+/* input types
+*-------------------------- */
+/* likert */
+.wufoo-form .wufoo-likert {
+    overflow-x: auto;
+    padding-bottom: 15px;
+}
+
+.wufoo-form .wufoo-likert thead td,
+.wufoo-form .wufoo-likert tr:nth-of-type(even) td {
+    background-color: #e6e6e6;
+}
+
+.wufoo-form .wufoo-likert tr td:first-child {
+    text-align: left;
+}
+
+.wufoo-form .wufoo-likert tr td {
+    padding: 2.5px 5px;
+    background-color: #fff;
+    border: 1px solid #c0c0c0;
+    text-align: center;
+}
+
+.wufoo-form .wufoo-likert tr td  label input[type="radio"] {
+    margin: 5px auto 0;
+    display: block;
+}
+
+/* ratings */
+.wufoo-form .wufoo-ratings label input[type="radio"] {
+    display: none;
+}
+
+.wufoo-form .wufoo-ratings div label {
+    display: inline-block;
+    position: relative;
+    width: 25px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.wufoo-form .wufoo-ratings div label span:nth-last-of-type(1) {
+    color: #000;
+    display: block;
+}
+
+.wufoo-form .wufoo-ratings div label span:nth-last-of-type(2) {
+    color: #ffd700;
+    display: none;
+}
+
+.wufoo-form .wufoo-ratings div label input[type="radio"]:checked ~ span:nth-last-of-type(1),
+.wufoo-form .wufoo-ratings div label.active input[type="radio"] ~ span:nth-last-of-type(1) {
+    display: none;
+}
+
+.wufoo-form .wufoo-ratings div label input[type="radio"]:checked ~ span:nth-last-of-type(2),
+.wufoo-form .wufoo-ratings div label.active input[type="radio"] ~ span:nth-last-of-type(2) {
+    display: block;
+}
+
+.wufoo-form .wufoo-success,
+.wufoo-form .wufoo-fail.validation-advice,
+.wufoo-form .wufoo-error.validation-advice {
+    text-align: center;
+    width: 100%;
+    max-width: 250px;
+    display: block;
+    margin: 0px auto 25px;
+    clear: both;
+}
+
+.wufoo-form .wufoo-success p,
+.wufoo-form .wufoo-fail.validation-advice p,
+.wufoo-form .wufoo-error.validation-advice p {
+    margin-bottom: 0;
+}
+
+/* Buttons
+*-------------------------- */
+.wufoo-form .buttons-set {
+    clear: both;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.wufoo-form button[type="submit"] {
+    background: #f2c301;
+    border: 1px solid #d9af01;
+    color: #000000;
+    text-shadow: none;
+    outline: none;
+    width: 50%;
+    max-width: 150px;
+    -webkit-transition: all .35s ease-in-out !important;
+    transition: all .35s ease-in-out !important;
+}
+
+.wufoo-form button[type="submit"]:hover {
+    background: #fed941;
+    border: 1px solid #fecf0e;
+}
+
+/*----------------------------------------------------
+* Responsive Modal Settings
+* Media queries for popup modal
+* ----------------------------------------------------*/
+/* lg desktop */
+@media (min-width: 1200px) {
+    .wufoo-modal {
+        -webkit-transform: translate(0%, 0%);
+        transform: translate(0%, 0%);
+    }
+}
+
+/* md desktop */
+@media (max-width: 1199px) {
+    .wufoo-modal {
+        position: fixed;
+        top: 50% !important;
+        left: 50% !important;
+        max-height: 450px !important;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        bottom: auto;
+        right: auto;
+        margin: auto;
+    }
+}
+
+/* tablet */
+@media (min-width: 481px) and (max-width: 1199px) {
+    .wufoo-modal {
+        width: 75% !important;
+    }
+}
+
+/* mobile */
+@media (max-width: 480px) {
+    .wufoo-modal {
+        width: 90% !important;
+    }
+
+    .wufoo-modal .modal-body {
+        padding: 15px 5px;
+    }
+
+    /* prevent zooming on iOs devices when interacting with inputs */
+    .wufoo-form select,
+    .wufoo-form textarea,
+    .wufoo-form input {
+        font-size: 16px !important;
+    }
+
+    /* grid */
+    .wufoo-form .input-box.grid-25  { width: 100% !important; }
+    .wufoo-form .input-box.grid-33  { width: 100% !important; }
+    .wufoo-form .input-box.grid-50  { width: 100% !important; }
+    .wufoo-form .input-box.grid-66  { width: 100% !important; }
+    .wufoo-form .input-box.grid-75  { width: 100% !important; }
+
+    /* submit button */
+    .wufoo-form button[type="submit"] {
+        width: 100%;
+        max-width: 100%;
+    }
+
+}
