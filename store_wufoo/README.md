@@ -47,3 +47,5 @@ $data       = $this->getRequest()->getParam('data');
     'Field219' => Mage::helper('core/url')->getCurrentUrl(),
 )
 ```
+
+- You should now have your form being generated on your Magento page. If you wish to change pages; you'll have to update the Wufoo XML under ```app/design/frontend/bootstrapped/layout/wufoo.xml```.
