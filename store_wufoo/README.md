@@ -6,16 +6,6 @@ This module hooks into the Wufoo API to dynamically generate forms you create th
 ### What is Wufoo?:
 - Read about it here: https://www.wufoo.com/
 
-### Where can I find my form API information?:
-- In your Wufoo Form Manager hover your mouse over ```More``` and select ```API information```.
-- You will see your account Wufoo API key here.
-- Your form HASH ID, near the bottom of the page, is used to pull form fields into this module.
-- Each field has an API ID assigned to it.
-
-### My Form is not Submitting:
-- Make sure you are only submitting data your form accepts. If any extra ID's are submitted; the API will fail.
-- Make sure Magento's validation is turned on. This module validation.js with some custom rules built to accommodate Wufoo.
-
 ### How it works:
 - Attach your API key and Wufoo account name into the IndexController.php
 ```
@@ -49,3 +39,13 @@ $data       = $this->getRequest()->getParam('data');
 ```
 
 - You should now have your form being generated on your Magento page. If you wish to change pages; you'll have to update the Wufoo XML under ```app/design/frontend/bootstrapped/layout/wufoo.xml```.
+
+### Where can I find my form API information?:
+- In your Wufoo Form Manager hover your mouse over ```More``` and select ```API information```.
+- You will see your account Wufoo API key here.
+- Your form HASH ID, near the bottom of the page, is used to pull form fields into this module.
+- Each field has an API ID assigned to it.
+
+### My Form is not Submitting:
+- Make sure you are only submitting data your form accepts. If any extra ID's are submitted; the API will fail.
+- Make sure Magento's validation is turned on. This module validation.js with some custom rules built to accommodate Wufoo.
